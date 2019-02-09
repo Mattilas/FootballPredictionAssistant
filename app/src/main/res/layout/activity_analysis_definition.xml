@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".analysisDefinition">
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="315dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/homeTeamLabel"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamLabel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SeekBar
+        android:id="@+id/awayTeamGameImportanceSelectionSeekBar"
+        android:layout_width="330dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:max="5"
+        android:progress="3"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="@+id/homeTeamGameImportanceSelectionSeekBar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/homeTeamGameImportanceSelectionSeekBar"
+        app:layout_constraintTop_toBottomOf="@+id/gameImportanceForAwayTeam"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="418dp"
+        android:layout_height="605dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".newAnalysisActivity">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="8dp"
+            android:text="Analyse"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/awayTeamName"
+            app:layout_constraintVertical_bias="0.796" />
+
+        <AutoCompleteTextView
+            android:id="@+id/homeTeamName"
+            android:layout_width="306dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="190dp"
+            android:layout_marginEnd="16dp"
+            android:accessibilityLiveRegion="polite"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.593"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:inputType="textVisiblePassword" />
+
+        <AutoCompleteTextView
+            android:id="@+id/awayTeamName"
+            android:layout_width="304dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="120dp"
+            android:accessibilityLiveRegion="polite"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/holo_blue_light"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/homeTeamName"
+            app:layout_constraintTop_toBottomOf="@+id/homeTeamName"
+            app:layout_constraintVertical_bias="0.704"
+            android:inputType="textVisiblePassword"/>
+
+        <TextView
+            android:id="@+id/debuggingLabel"
+            android:layout_width="405dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/nameLabel3"
+        android:layout_width="315dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/awayTeamLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/awayTeamLabel"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamLabel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/awayTeamLabel"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:text="Away Team"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintEnd_toEndOf="@+id/homeTeamGameImportanceSelectionSeekBar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/homeTeamGameImportanceSelectionSeekBar"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamGameImportanceSelectionSeekBar" />
+
+    <TextView
+        android:id="@+id/homeTeamLabel"
+        android:layout_width="315dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="13dp"
+        android:text="Home Team"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/holo_green_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameType" />
+
+    <TextView
+        android:id="@+id/gameTypeLabel"
+        android:layout_width="315dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="11dp"
+        android:onClick="typeOfGameChoice"
+        android:text="Type of game"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/gameType"
+        android:layout_width="315dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameTypeLabel" />
+
+    <TextView
+        android:id="@+id/gameImportanceForHomeTeam"
+        android:layout_width="315dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="64dp"
+        android:text="Game importance: "
+        app:layout_constraintEnd_toEndOf="@+id/homeTeamLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/homeTeamLabel"
+        app:layout_constraintTop_toBottomOf="@+id/homeTeamLabel" />
+
+    <TextView
+        android:id="@+id/gameImportanceForAwayTeam"
+        android:layout_width="315dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="76dp"
+        android:text="Game importance: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/nameLabel3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/nameLabel3"
+        app:layout_constraintTop_toBottomOf="@+id/awayTeamLabel"
+        app:layout_constraintVertical_bias="0.362" />
+
+    <SeekBar
+        android:id="@+id/homeTeamGameImportanceSelectionSeekBar"
+        android:layout_width="330dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:max="5"
+        android:progress="3"
+        app:layout_constraintEnd_toEndOf="@+id/gameImportanceForHomeTeam"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/gameImportanceForHomeTeam"
+        app:layout_constraintTop_toBottomOf="@+id/gameImportanceForHomeTeam" />
+
+</android.support.constraint.ConstraintLayout>
